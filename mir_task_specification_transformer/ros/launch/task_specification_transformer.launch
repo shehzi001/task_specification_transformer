@@ -1,6 +1,9 @@
 <?xml version="1.0"?>
 <launch>
   <node pkg="mir_task_specification_transformer" type="task_specification_transformer_node" 
-  										name="task_specification_transformer_node" output="screen" />
+  						name="task_specification_transformer_node" output="screen" >
+	<remap from="~inventory" to="/robot_example_ros/inventory" />
+	<remap from="~order_info" to="/robot_example_ros/order_info" />
+  </node>
 </launch>
 

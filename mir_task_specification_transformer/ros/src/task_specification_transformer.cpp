@@ -8,9 +8,9 @@ TaskSpecificationTransformer::TaskSpecificationTransformer(const ros::NodeHandle
 {
     // ROS Subscribers
     event_in_sub_ = nh_.subscribe<std_msgs::String>("event_in", 1, &TaskSpecificationTransformer::cbEventIn, this);
-    inventory_sub_ = nh_.subscribe<at_work_robot_example_ros::Inventory>("/robot_example_ros/inventory", 1, 
+    inventory_sub_ = nh_.subscribe<at_work_robot_example_ros::Inventory>("inventory", 1, 
                                                             &TaskSpecificationTransformer::cbInventory, this);
-    order_sub_ = nh_.subscribe<at_work_robot_example_ros::OrderInfo>("/robot_example_ros/order_info", 1, 
+    order_sub_ = nh_.subscribe<at_work_robot_example_ros::OrderInfo>("order_info", 1, 
                                                             &TaskSpecificationTransformer::cbOrder, this);
 
     // ROS Publishers
