@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<launch>
+  <node pkg="mir_task_specification_transformer" type="task_specification_transformer_node" 
+  										name="task_specification_transformer_node" output="screen" />
+</launch>
+
